@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070b13" />
+    <meta
+      name="description"
+      content="Um convite cinematográfico para Alanis assistir A Odisseia."
+    />
+    <title>Operação Odisseia — Convite para Alanis</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070b13'/%3E%3Cpath d='M18 14h28v36H18z' fill='%23d7b56d'/%3E%3Cpath d='M23 20h18v24H23z' fill='%23070b13'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <noscript>
+      <p class="noscript">
+        Este convite precisa de JavaScript para abrir o envelope.
+      </p>
+    </noscript>
+
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <section class="intro" id="intro" aria-labelledby="intro-title">
+      <div class="curtain curtain-left" aria-hidden="true"></div>
+      <div class="curtain curtain-right" aria-hidden="true"></div>
+      <div class="projector-beam" aria-hidden="true"></div>
+
+      <div class="intro-content">
+        <p class="eyebrow">Walisson apresenta</p>
+        <h1 id="intro-title">Uma missão<br />quase impossível</h1>
+        <div class="intro-rule" aria-hidden="true"><span>✦</span></div>
+        <p class="intro-subtitle">
+          Convencer Alanis a aceitar um ingresso já comprado
+        </p>
+
+        <button class="premiere-button" id="enterButton" type="button">
+          <span>Entrar na sessão</span>
+          <small>com trilha sonora</small>
+        </button>
+
+        <p class="sound-note">♫ “Ironic” — Alanis Morissette</p>
+      </div>
+
+      <div
+        class="countdown"
+        id="countdown"
+        aria-live="assertive"
+        aria-hidden="true"
+      >
+        <span id="countdownNumber">3</span>
+      </div>
+    </section>
+
+    <main class="experience" id="experience" aria-hidden="true">
+      <header class="topbar">
+        <a class="brand" href="#convite" aria-label="Voltar ao convite">
+          <span class="brand-mark">WO</span>
+          <span>Operação Odisseia</span>
+        </a>
+        <button
+          class="sound-button"
+          id="soundButton"
+          type="button"
+          aria-expanded="true"
+        >
+          <span class="equalizer" aria-hidden="true"
+            ><i></i><i></i><i></i
+          ></span>
+          <span id="soundButtonText">Trilha</span>
+        </button>
+      </header>
+
+      <section class="hero" id="convite">
+        <div class="stars" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Convocação oficial nº 16.07.2026</p>
+          <h2 class="reveal reveal-delay-1">
+            Alanis,<br /><em>seu lugar está reservado.</em>
+          </h2>
+          <p class="hero-lead reveal reveal-delay-2">
+            Uma aventura homérica, duas poltronas e zero necessidade de remar
+            por dez anos para chegar ao cinema.
+          </p>
+          <div class="mission-tag reveal reveal-delay-3">
+            <span>Classificação da missão</span>
+            <strong>amizade épica + entretenimento</strong>
+          </div>
+        </div>
+
+        <div class="envelope-scene reveal reveal-delay-2" id="envelopeScene">
+          <div class="tulips tulips-left" aria-hidden="true">
+            <svg viewBox="0 0 150 280" role="img">
+              <path class="stem" d="M83 270c-3-72 9-131-2-194" />
+              <path
+                class="leaf"
+                d="M80 199c-30-34-55-26-56-25 13 29 31 42 56 42"
+              />
+              <path
+                class="leaf"
+                d="M84 158c25-37 48-36 51-35-7 30-23 48-51 54"
+              />
+              <path
+                class="petal"
+                d="M82 86C45 76 43 43 51 19c12 8 23 17 31 31 8-14 19-23 31-31 8 24 6 57-31 67Z"
+              />
+              <path
+                class="petal-light"
+                d="M82 84C67 64 69 35 82 14c13 21 15 50 0 70Z"
+              />
+            </svg>
+          </div>
+
+          <button
+            class="envelope"
+            id="envelope"
+            type="button"
+            aria-label="Abrir o envelope e revelar o ingresso"
+          >
+            <span class="envelope-back"></span>
+
+            <span class="ticket" id="ticket">
+              <span class="ticket-stub">
+                <span class="ticket-vertical">ADMIT ONE</span>
+                <span class="ticket-number">016</span>
+              </span>
+              <span class="ticket-main">
+                <span class="ticket-kicker">Convite especial para</span>
+                <strong>ALANIS</strong>
+                <span class="ticket-film">A ODISSEIA</span>
+                <span class="ticket-details">
+                  <span><b>DATA</b> 16 JUL 2026</span>
+                  <span><b>HORA</b> 20H40</span>
+                  <span><b>LOCAL</b> UCI SHOPPING NEW YORK</span>
+                </span>
+                <span class="barcode" aria-hidden="true"></span>
+              </span>
+            </span>
+
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="wax-seal">A</span>
+          </button>
+
+          <p class="open-hint" id="openHint">
+            Clique no envelope — ele treinou para este momento.
+          </p>
+
+          <div class="tulips tulips-right" aria-hidden="true">
+            <svg viewBox="0 0 150 280" role="img">
+              <path class="stem" d="M83 270c-3-72 9-131-2-194" />
+              <path
+                class="leaf"
+                d="M80 199c-30-34-55-26-56-25 13 29 31 42 56 42"
+              />
+              <path
+                class="leaf"
+                d="M84 158c25-37 48-36 51-35-7 30-23 48-51 54"
+              />
+              <path
+                class="petal"
+                d="M82 86C45 76 43 43 51 19c12 8 23 17 31 31 8-14 19-23 31-31 8 24 6 57-31 67Z"
+              />
+              <path
+                class="petal-light"
+                d="M82 84C67 64 69 35 82 14c13 21 15 50 0 70Z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>Role para o próximo ato
+        </div>
+      </section>
+
+      <section class="details-section" id="detalhes">
+        <div class="section-heading">
+          <p class="eyebrow">Ato II</p>
+          <h2>O plano de viagem</h2>
+          <p>Sem ciclopes, sem sereias e, com sorte, sem fila na bomboniere.</p>
+        </div>
+
+        <div class="details-grid">
+          <article class="detail-card">
+            <span class="card-number">01</span>
+            <span class="card-icon" aria-hidden="true">◷</span>
+            <h3>Quando</h3>
+            <p>Quinta-feira<br /><strong>16 de julho · 20h40</strong></p>
+          </article>
+          <article class="detail-card featured">
+            <span class="card-number">02</span>
+            <span class="card-icon" aria-hidden="true">⌖</span>
+            <h3>Onde</h3>
+            <p>UCI<br /><strong>Shopping New York</strong></p>
+          </article>
+          <article class="detail-card">
+            <span class="card-number">03</span>
+            <span class="card-icon" aria-hidden="true">✦</span>
+            <h3>Objetivo</h3>
+            <p>
+              Assistir ao filme<br /><strong
+                >e comentar o roteiro depois</strong
+              >
+            </p>
+          </article>
+        </div>
+
+        <aside class="friendly-disclaimer">
+          <span class="disclaimer-mark">!</span>
+          <p>
+            <strong>Nota da produção:</strong> este convite não contém subtexto
+            romântico, pedido de casamento nem contrato com letras miúdas. É
+            cinema entre amigos — só que com orçamento de marketing
+            desnecessariamente alto.
+          </p>
+        </aside>
+      </section>
+
+      <section class="decision-section" id="resposta">
+        <div class="decision-card">
+          <p class="eyebrow">Cena decisiva</p>
+          <h2>Alanis aceita<br />esta missão?</h2>
+          <p class="decision-copy">
+            Os ingressos já fizeram as malas. Falta apenas a protagonista
+            convidada.
+          </p>
+
+          <div class="decision-zone" id="decisionZone">
+            <button class="yes-button" id="yesButton" type="button">
+              <span>Sim, eu vou</span>
+              <small>boa escolha de roteiro</small>
+            </button>
+            <button class="no-button" id="noButton" type="button">Não</button>
+          </div>
+
+          <p class="no-message" id="noMessage" aria-live="polite">
+            O botão “Não” está estranhamente nervoso.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <span>Uma produção independente de Walisson</span>
+        <span>Feito especialmente para Alanis · 2026</span>
+      </footer>
+    </main>
+
+    <aside
+      class="soundtrack-panel"
+      id="soundtrackPanel"
+      aria-label="Trilha sonora"
+    >
+      <div class="soundtrack-heading">
+        <div>
+          <span>Agora tocando</span>
+          <strong>Ironic · Alanis Morissette</strong>
+        </div>
+        <button
+          id="collapseSoundtrack"
+          type="button"
+          aria-label="Recolher player"
+        >
+          ⌄
+        </button>
+      </div>
+      <div id="youtubePlayer"></div>
+      <p id="playerFallback">
+        Se a música não começar sozinha, aperte o play no vídeo.
+      </p>
+    </aside>
+
+    <section
+      class="credits"
+      id="credits"
+      aria-hidden="true"
+      aria-label="Créditos finais"
+    >
+      <div class="confetti" id="confetti" aria-hidden="true"></div>
+      <button class="close-credits" id="closeCredits" type="button">
+        Fechar créditos ×
+      </button>
+
+      <div class="credits-roll" id="creditsRoll">
+        <p class="credits-small">A PRODUÇÃO TEM O PRAZER DE CONFIRMAR</p>
+        <h2>MISSÃO ACEITA</h2>
+        <p class="credits-gold">ALANIS VAI À SESSÃO</p>
+
+        <div class="credits-space"></div>
+
+        <p class="credits-role">CONVIDADA DE HONRA</p>
+        <p class="credits-name">Alanis</p>
+
+        <p class="credits-role">
+          LOGÍSTICA, INGRESSOS<br />E INSISTÊNCIA MODERADA
+        </p>
+        <p class="credits-name">Walisson</p>
+
+        <p class="credits-role">PARTICIPAÇÃO ESPECIAL</p>
+        <p class="credits-name">As tulipas</p>
+
+        <p class="credits-role">DUBLÊ PROFISSIONAL</p>
+        <p class="credits-name">O botão “Não”</p>
+
+        <div class="credits-space small"></div>
+
+        <p class="credits-quote">
+          “Depois de vinte anos no mar, Ulisses voltou para casa.<br />Você só
+          precisa chegar ao shopping.”
+        </p>
+
+        <div class="credits-space small"></div>
+
+        <p class="credits-event">
+          16 JUL 2026 · 20H40<br />UCI SHOPPING NEW YORK
+        </p>
+        <p class="credits-final">ATÉ A SESSÃO</p>
+        <span class="credits-tulip" aria-hidden="true">♣</span>
+
+        <button class="replay-button" id="replayButton" type="button">
+          Rever o convite
+        </button>
+      </div>
+    </section>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
